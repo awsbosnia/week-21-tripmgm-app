@@ -1,0 +1,47 @@
+{
+	"environment": {
+		"computeType": "BUILD_GENERAL1_MEDIUM",
+		"imagePullCredentialsType": "CODEBUILD",
+		"privilegedMode": true,
+		"image": "aws/codebuild/amazonlinux2-x86_64-standard:4.0",
+		"environmentVariables": [],
+		"type": "LINUX_CONTAINER"
+	},
+	"timeoutInMinutes": 60,
+	"name": "test-2",
+	"serviceRole": "arn:aws:iam::769312778453:role/service-role/codebuild-tripmgmt-demo-build-service-role-week-20",
+	"tags": [],
+	"artifacts": {
+		"type": "NO_ARTIFACTS"
+	},
+	"cache": {
+		"type": "NO_CACHE"
+	},
+	"sourceVersion": "refs/heads/master",
+	"source": {
+		"gitSubmodulesConfig": {
+			"fetchSubmodules": false
+		},
+		"gitCloneDepth": 1,
+		"type": "CODECOMMIT",
+		"location": "https://git-codecommit.us-east-1.amazonaws.com/v1/repos/tripmgmtdemo",
+		"insecureSsl": false
+	},
+	"badge": {
+		"badgeEnabled": false
+	},
+	"queuedTimeoutInMinutes": 480,
+	"secondaryArtifacts": [],
+	"logsConfig": {
+		"s3Logs": {
+			"status": "DISABLED",
+			"encryptionDisabled": false
+		},
+		"cloudWatchLogs": {
+			"status": "ENABLED"
+		}
+	},
+	"secondarySources": [],
+	"encryptionKey": "arn:aws:kms:us-east-1:769312778453:alias/aws/s3",
+	"secondarySourceVersions": []
+}
